@@ -1,0 +1,20 @@
+// диспетчер подключений (только импорты)
+
+// Bootstrap 4
+@import 'bootstrap-reboot';
+@import 'bootstrap-grid';
+@import 'bootstrap';
+
+// Base styles
+@import 'base';
+
+// Typography
+@import 'typography';
+
+// Blocks
+@import '../blocks/footer/footer';
+@import '../blocks/header/header';
+@import '../blocks/home/home';
+@import '../blocks/platform/platform';
+
+@import '../blocks/countdown/countdown';
