@@ -1,4 +1,4 @@
-@import '../sass/variables';
+@import "../sass/variables";
 
 .header {
   left: 0;
@@ -26,6 +26,21 @@
     margin: 0 15px;
   }
 
+  &__item--new {
+    position: relative;
+    &:after {
+      content: "NEW";
+      top: -12px;
+      right: -12px;
+      position: absolute;
+      background-color: #f24a5d;
+      color: #fff;
+      font-size: 9px;
+      border-radius: 3px;
+      padding: 0 4px;
+    }
+  }
+
   &__link {
     font-weight: bold;
     font-size: 16px;
@@ -35,5 +50,91 @@
       text-decoration: none;
       color: rgba(255, 255, 255, 1);
     }
+  }
+}
+
+// Mobile menu toggler
+
+.nav-toggler {
+  width: 46px;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 4.44px;
+    border-radius: 3px;
+    width: 100%;
+    background: #fff none repeat scroll 0% 0%;
+    opacity: 1;
+    right: 0px;
+    transition: all 0.25s ease-in-out 0s;
+    transform: rotate(0deg);
+
+    &:nth-child(1) {
+      margin-top: 0px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 16px;
+      margin-right: 0px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 32px;
+    }
+  }
+}
+.nav-toggler.nav-toggler--opened span:nth-child(1) {
+  transform: rotate(135deg);
+  margin-top: 16px;
+}
+.nav-toggler.nav-toggler--opened span:nth-child(2) {
+  opacity: 0;
+  right: -75px;
+}
+.nav-toggler.nav-toggler--opened span:nth-child(3) {
+  transform: rotate(-135deg);
+  margin-top: 16px;
+}
+
+.nav-toggler {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-toggler {
+    display: inline-block;
+  }
+
+  .nav--header {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #212430;
+    top: $header-height;
+    left: 0;
+    max-height: calc(100vh - #{$header-height});
+  }
+
+  .nav__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+  }
+
+  .nav__item {
+    display: block;
+  }
+
+  .nav__link {
+    font-size: 32px;
   }
 }

@@ -1,29 +1,29 @@
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
-    url('../fonts/Rubik-Medium.woff') format('woff');
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.woff2") format("woff2"),
+    url("../fonts/Rubik-Medium.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-Light.woff2') format('woff2'),
-    url('../fonts/Rubik-Light.woff') format('woff');
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Light.woff2") format("woff2"),
+    url("../fonts/Rubik-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
-    url('../fonts/Rubik-Regular.woff') format('woff');
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2"),
+    url("../fonts/Rubik-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-weight: normal;
   font-style: normal;
 }
@@ -31,4 +31,7 @@ body {
 .section-title {
   font-weight: bold;
   font-size: 2.5rem;
+  @include media-breakpoint-down(md) {
+    margin-top: 1.5rem;
+  }
 }

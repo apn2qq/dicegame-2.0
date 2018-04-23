@@ -1,4 +1,4 @@
-@import '../sass/variables';
+@import "../sass/variables";
 
 .home {
   background: radial-gradient(ellipse at center, #41465a 0%, #1f2127 100%);
@@ -9,6 +9,11 @@
     color: #fff;
     font-size: 2.9rem;
     margin-bottom: $headings-margin-bottom;
+    line-height: 1.05;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      font-size: 2.2rem;
+    }
   }
   &__descr {
     color: #fff;
@@ -18,8 +23,16 @@
 
 #js-home-particles {
   canvas {
-    height: calc(100% - 76px) !important;
+    height: calc(100% - #{$header-height}) !important;
     position: absolute;
     z-index: 20;
+  }
+}
+
+//tmp
+@media only screen and (max-width: 450px) {
+  .home {
+    height: auto;
+    padding-bottom: 3rem;
   }
 }
